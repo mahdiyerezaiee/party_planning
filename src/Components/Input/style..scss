@@ -1,0 +1,60 @@
+input{
+  background: #1C1C1C!important;
+  border-color: #5E5E5E!important;
+  color: #FFFFFF!important;
+  color-scheme: dark;
+
+}
+label{
+  color: #FFFFFF!important;
+  font-size: 14px!important;
+  font-weight: 700!important;
+  line-height: 17px!important;
+  letter-spacing: 0px!important;
+  text-align: left!important;
+
+}
+
+
+input[type="time"]::placeholder {
+  content: 'HH:mm';
+  background: #1C1C1C!important;
+
+  color: #FFFFFF;
+  position: absolute;
+  width: 70px;
+}
+input[type="date"]::placeholder {
+  content: 'DD-MM-YYYY';
+  background: #1C1C1C!important;
+
+  color: #FFFFFF;
+  position: absolute;
+  width: fit-content;
+}
+
+input[type="time"]:focus:before {
+  width: 70px;
+  content: "";
+}
+input[type="date"]:focus:before {
+  width: fit-content;
+  content: '';
+}
+.input-group{
+  background: #1C1C1C!important;
+  border: 1px solid #5E5E5E!important;
+  color: #FFFFFF!important;
+  border-radius: 6px;
+  input{
+    border: none!important;
+  }
+  path{
+    fill: #FFFFFF!important;
+  }
+}
+.input-group-text{
+  background: #1C1C1C!important;
+  border:transparent!important;
+  color: #FFFFFF!important;
+}

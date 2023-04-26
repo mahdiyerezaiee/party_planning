@@ -1,0 +1,20 @@
+.nexButton{
+  width: 94%;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  background-color: #76A9FF;
+  padding: 11px 0 12px 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.07px;
+  position: fixed;
+  bottom: 4%;
+  left: 3%;
+  &:disabled{
+    background: #405984;
+    color:#848484;
+    opacity: 0.5;
+  }
+}
+

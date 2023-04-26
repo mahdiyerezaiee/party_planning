@@ -1,0 +1,23 @@
+.HeaderList{
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+
+  span{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+
+  }
+
+  .progress {
+    margin-top: 20px;
+    --bs-progress-height: 0.1rem!important;
+    --bs-progress-bg: rgba(71, 71, 71, 1)!important;
+    --bs-progress-bar-bg: rgba(118, 169, 255, 1)!important;
+
+}
+}

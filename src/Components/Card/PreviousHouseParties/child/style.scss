@@ -1,0 +1,36 @@
+.PreviuseItem {
+  background-color: rgb(28, 28, 28);
+  border-radius: 8px;
+  padding: 7px 17px;
+
+  h5 {
+    padding-top: 1rem;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: left;
+
+  }
+
+  span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0px;
+    color: rgba(173, 173, 173, 1);
+  }
+  .iconOccasin {
+    border: 1px solid;
+    padding: 6px 6px 5px 6px;
+    border-radius: 100%;
+    width: fit-content;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+}

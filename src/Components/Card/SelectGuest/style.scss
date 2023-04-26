@@ -1,0 +1,40 @@
+.selectGuest{
+  span{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    display: block;
+
+  }
+.selectGuestItem{
+  border: 1px solid;
+
+  height: 100%;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgba(28, 28, 28, 1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+ h6{
+   color: #FFFFFF;
+
+   padding-top: 10px;
+   font-size: 14px;
+   font-weight: 700;
+   letter-spacing: 0px;
+ }
+  p{
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  img{
+    width: 42px;
+  }
+}
+}
