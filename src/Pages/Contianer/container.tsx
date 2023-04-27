@@ -6,7 +6,7 @@ const Container = () => {
   const state = useAppSelector(state => state.page)
 
   return(
-      <div>{conditionalComponent(state)}</div>
+      <div className="pb-5 ">{conditionalComponent(state)}</div>
   )
 }
 export default Container

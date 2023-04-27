@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { RootState } from '../Store/store';
 
 interface PageState {
     page: number
@@ -30,9 +29,4 @@ export const pageSlice = createSlice({
 
 export const { pagePreservative } = pageSlice.actions
 
-export const SelectPage = (state: RootState) => state.page
 
-// Load state from local storage
-
-
-export default pageSlice.reducer

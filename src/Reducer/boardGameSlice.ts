@@ -32,4 +32,3 @@ export const { boradGameSelect } = boradGameSlice.actions
 
 
 
-export default boradGameSlice.reducer

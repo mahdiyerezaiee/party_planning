@@ -32,4 +32,3 @@ export const { foodSelect } = foodSlice.actions
 
 
 
-export default foodSlice.reducer

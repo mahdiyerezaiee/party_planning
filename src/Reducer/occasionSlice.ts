@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { RootState } from '../Store/store';
 
 interface OccasinState {
     id: number
@@ -32,4 +31,3 @@ export const occasionSlice = createSlice({
 
 export const { occasionSelect } = occasionSlice.actions
 
-export default occasionSlice.reducer

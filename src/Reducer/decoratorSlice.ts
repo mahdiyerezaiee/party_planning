@@ -32,4 +32,3 @@ export const { decoratorSelect } = decoratorSlice.actions
 
 
 
-export default decoratorSlice.reducer

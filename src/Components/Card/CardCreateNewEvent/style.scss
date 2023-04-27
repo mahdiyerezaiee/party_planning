@@ -2,6 +2,7 @@
   background: linear-gradient(107.73deg, #50586A 11.4%, #1E2530 85.72%);
   border-radius: 8px;
   padding: 20px;
+  margin-bottom: 8px;
   span{
     color: white;
     font-style: normal;
@@ -25,4 +26,18 @@ padding-top: 1%;
     width: 76px;
     float: right;
   }
+}
+.NewButton{
+  button{
+    float: right;
+  }
+
+}
+.textUp{
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+
 }

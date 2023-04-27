@@ -32,4 +32,3 @@ export const { inviteSelect } = inviteSlice.actions
 
 
 
-export default inviteSlice.reducer

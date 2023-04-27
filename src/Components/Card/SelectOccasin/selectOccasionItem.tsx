@@ -1,4 +1,4 @@
-import {OccasionColor, OccasionTypeEnum} from "../../../Enums/occasionTypeEnum";
+import {OccasionTypeEnum} from "../../../Enums/occasionTypeEnum";
 import "./style.scss"
 import {useAppDispatch, useAppSelector} from "../../../Hook/hook";
 import {occasionSelect} from "../../../Reducer/occasionSlice";

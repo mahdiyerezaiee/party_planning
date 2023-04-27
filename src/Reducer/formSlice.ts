@@ -44,4 +44,3 @@ export const { setForm } = formSlice.actions
 
 
 
-export default formSlice.reducer

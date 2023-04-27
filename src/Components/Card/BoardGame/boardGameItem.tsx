@@ -14,7 +14,7 @@ const BoardGameItem = () => {
     return(
         <Fragment>
             {BoardGameTypeEnum.map((item:any)=>
-                <SelectButton handlerClick={()=>selectHandler(item.id)} child={item.name} selected={state.id === item.id ? true : false}/>
+                <SelectButton key={item.id} handlerClick={()=>selectHandler(item.id)} child={item.name} selected={state.id === item.id ? true : false}/>
             )}
         </Fragment>
     )

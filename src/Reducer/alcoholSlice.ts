@@ -32,4 +32,3 @@ export const { alcoholSelect } = alcoholSlice.actions
 
 
 
-export default alcoholSlice.reducer

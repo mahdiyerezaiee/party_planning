@@ -32,4 +32,3 @@ export const { guestSelect } = guestSlice.actions
 
 
 
-export default guestSlice.reducer
