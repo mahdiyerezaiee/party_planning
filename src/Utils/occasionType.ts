@@ -6,5 +6,4 @@ export const imgOccasin = (id: number) => {
 }
 export const NameOccasin = (id: number) => {
     return (OccasionTypeEnum.filter((item: any) => item.id === id).map((item: any) => item.name))
-
 }

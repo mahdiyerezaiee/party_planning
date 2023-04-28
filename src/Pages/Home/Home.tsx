@@ -9,13 +9,13 @@ import IntervalEvent from "../../Utils/intervalEvent";
  * @constructor
  */
 const Home = () => {
-    return(
-        <Fragment >
-        <IntervalEvent/>
-         <HeaderHome/>
-         <CardCreateNewEvent/>
-         <PreviuseHouseParties/>
-      </Fragment>
- )
+    return (
+        <Fragment>
+            <IntervalEvent/>
+            <HeaderHome/>
+            <CardCreateNewEvent/>
+            <PreviuseHouseParties/>
+        </Fragment>
+    )
 }
 export default Home

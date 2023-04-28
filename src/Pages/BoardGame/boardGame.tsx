@@ -4,8 +4,6 @@ import BoardGameImg from "../../Assets/Img/BoardGame.png";
 import NextButton from "../../Components/Button/NexButton/nextButton";
 import BoardGameItem from "../../Components/Card/BoardGame/boardGameItem";
 import {setTodo} from "../../Reducer/eventSlice";
-import {useEffect, useState} from "react";
-import {pagePreservative} from "../../Reducer/pageSlice";
 import {AddEventToDo} from "../../Utils/addEventToDo";
 
 /**

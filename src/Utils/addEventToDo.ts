@@ -1,5 +1,10 @@
 import {pagePreservative} from "../Reducer/pageSlice";
 
+/**
+ *
+ * @param dispatch
+ * @constructor
+ */
 export const AddEventToDo = (dispatch: any) => {
 
     window.location.reload()
@@ -13,7 +18,6 @@ export const AddEventToDo = (dispatch: any) => {
     localStorage.removeItem("InviteState")
     localStorage.removeItem("OccasinState")
     localStorage.removeItem("TodoState")
-
 
     dispatch(pagePreservative(1))
 }

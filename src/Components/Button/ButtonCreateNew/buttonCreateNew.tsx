@@ -5,7 +5,7 @@ import "./style.scss"
  * Define the Props interface which describes the props for the component
  */
 interface Props {
-    handlerClick:()=> void
+    handlerClick: () => void
 }
 
 /**
@@ -14,10 +14,9 @@ interface Props {
  * @param handlerClick
  * @constructor
  */
-const ButtonCreateNew:React.FC<Props> = ({handlerClick}) => {
-  return(
-      <button className="buttonCreateNew" onClick={handlerClick}> Create New </button>
-
-)
+const ButtonCreateNew: React.FC<Props> = ({handlerClick}) => {
+    return (
+        <button className="buttonCreateNew" onClick={handlerClick}> Create New </button>
+    )
 }
 export default ButtonCreateNew

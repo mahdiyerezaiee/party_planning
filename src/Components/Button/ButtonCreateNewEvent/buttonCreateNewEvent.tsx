@@ -5,7 +5,7 @@ import React from "react";
  * Define the type of the props passed to this component
  */
 interface Props {
-  handlerClick:()=> void
+    handlerClick: () => void
 }
 
 /**
@@ -14,9 +14,9 @@ interface Props {
  * @param handlerClick
  * @constructor
  */
-const ButtonCreateNewEvent:React.FC<Props> = ({handlerClick}) => {
-  return(
-      <button className="buttonCreateNewEvent" onClick={handlerClick}> CREATE A NEW EVENT </button>
-  )
+const ButtonCreateNewEvent: React.FC<Props> = ({handlerClick}) => {
+    return (
+        <button className="buttonCreateNewEvent" onClick={handlerClick}> CREATE A NEW EVENT </button>
+    )
 }
 export default ButtonCreateNewEvent

@@ -17,12 +17,12 @@ const Occasion = () => {
     const clickHandler = () => {
         dispatch(pagePreservative(3))
     }
-  return(
-      <div>
-        <HeaderList now={10}/>
-        <SelectOccasionItem/>
-          <NextButton handlerClick={()=>clickHandler()} statusDisabled={state.id ? false : true}/>
-      </div>
-  )
+    return (
+        <div>
+            <HeaderList now={10}/>
+            <SelectOccasionItem/>
+            <NextButton handlerClick={() => clickHandler()} statusDisabled={state.id ? false : true}/>
+        </div>
+    )
 }
 export default Occasion

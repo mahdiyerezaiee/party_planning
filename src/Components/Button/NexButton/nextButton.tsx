@@ -5,8 +5,8 @@ import "./style.scss"
  * Define Props interface with handlerClick and statusDisabled props
  */
 interface Props {
-    handlerClick:()=> void,
-    statusDisabled:boolean
+    handlerClick: () => void,
+    statusDisabled: boolean
 }
 
 /**
@@ -16,9 +16,9 @@ interface Props {
  * @param statusDisabled
  * @constructor
  */
-const NextButton:React.FC<Props> = ( { handlerClick , statusDisabled } ) => {
-  return (
-      <button className="nexButton" disabled={statusDisabled} onClick={handlerClick}>NEXT</button>
-  )
+const NextButton: React.FC<Props> = ({handlerClick, statusDisabled}) => {
+    return (
+        <button className="nexButton" disabled={statusDisabled} onClick={handlerClick}>NEXT</button>
+    )
 }
 export default NextButton

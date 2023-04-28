@@ -9,12 +9,12 @@ import CheckListItem from "../../Components/Card/TodoList/CheckList/checkListIte
  * @constructor
  */
 const CheckList = () => {
-  return(
-      <Fragment>
-          <HeaderTodoList/>
-          <InfoHeadChackList/>
-          <CheckListItem/>
-      </Fragment>
-  )
+    return (
+        <Fragment>
+            <HeaderTodoList/>
+            <InfoHeadChackList/>
+            <CheckListItem/>
+        </Fragment>
+    )
 }
-export default  CheckList
+export default CheckList

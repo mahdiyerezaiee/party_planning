@@ -8,10 +8,10 @@ import {conditionalComponent} from "../../Utils/conditionalComponent";
  * @constructor
  */
 const Container = () => {
-  const state = useAppSelector(state => state.page)
+    const state = useAppSelector(state => state.page)
 
-  return(
-      <div className="pb-5 ">{conditionalComponent(state)}</div>
-  )
+    return (
+        <div className="pb-5 ">{conditionalComponent(state)}</div>
+    )
 }
 export default Container

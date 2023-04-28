@@ -24,7 +24,7 @@ const CardCreateNewEvent = () => {
         dispatch(pagePreservative(10))
     }
 
-    if (state.itemsList.length !== 0 && state.itemsList.map((i:any)=> i.nameEvent) ) {
+    if (state.itemsList.length !== 0 && state.itemsList.map((i: any) => i.nameEvent)) {
         return (
             <Fragment>
                 <div className="row pb-3">

@@ -19,12 +19,8 @@ export default function IntervalEvent() {
                 if (eventDate < currentDate) {
                     dispatch(setPreviuseEvent(state.itemsList[i]))
                     dispatch(removePreviuseItem(Number(subArray.id)))
-
                 }
-
             }
-
-
         }, 1000); // Check every minute
 
         // Clean up the interval when the component unmounts
@@ -33,4 +29,3 @@ export default function IntervalEvent() {
 
     return null
 }
-

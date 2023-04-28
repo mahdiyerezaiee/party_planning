@@ -5,7 +5,7 @@ import {occasionSelect} from "../../../Reducer/occasionSlice";
 import {BgOccasin} from "../../../Utils/occasionBg";
 import {ColorOccasin} from "../../../Utils/occasionColor";
 import {setOccasion} from "../../../Reducer/eventSlice";
-// import {setEventOccasion} from "../../../Reducer/eventSlice";
+
 const SelectOccasionItem = () => {
     const dispatch = useAppDispatch()
 const state=useAppSelector(state => state.occasion)
@@ -14,7 +14,7 @@ const stateEvent=useAppSelector(state => state.event)
 
  const selectHandler =(id:number)=>{
         dispatch(occasionSelect(id))
-     dispatch(setOccasion({ id:stateEvent.id - 1 , occasionEventType:id }))
+     dispatch(setOccasion({id: stateEvent.id - 1 , occasionEventType:id }))
 
  }
 
