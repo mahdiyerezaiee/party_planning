@@ -17,7 +17,7 @@ const BoardGame = () => {
     const state = useAppSelector(state => state)
     const [states, setState] = useState<any>([])
 
-    /** se the useEffect hook to update local state when global state changes **/
+    /** use the useEffect hook to update local state when global state changes **/
     useEffect(() => {
         setState(state)
     }, [state])
