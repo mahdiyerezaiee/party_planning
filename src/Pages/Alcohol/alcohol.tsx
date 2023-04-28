@@ -4,7 +4,7 @@ import HeaderList from "../../Components/Header/HeaderList/headerList";
 import AlcoholImg from "../../Assets/Img/Alcohol.png";
 import NextButton from "../../Components/Button/NexButton/nextButton";
 import AlcoholItems from "../../Components/Card/Alcohol/alcoholItem";
-import {setTodo} from "../../Reducer/todoSlice";
+import {setTodo} from "../../Reducer/eventSlice";
 
 /**
  * Initializing Alcohol to-do page event
@@ -14,11 +14,17 @@ import {setTodo} from "../../Reducer/todoSlice";
 const Alcohol = () => {
     const dispatch = useAppDispatch()
     const state = useAppSelector(state => state.alcohol)
+    const stateEvent=useAppSelector(state => state.event)
+
     const clickHandler = () => {
         if (state.value !== 0){
-            dispatch(setTodo({
-                name:"alcohol"
-            }))
+            dispatch(setTodo(
+                {
+                    id: stateEvent.id - 1,
+
+                    name:"alcohol"
+            }
+            ))
             dispatch(pagePreservative(8))
 
         }else {

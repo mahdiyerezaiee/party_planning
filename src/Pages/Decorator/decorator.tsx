@@ -4,7 +4,7 @@ import HeaderList from "../../Components/Header/HeaderList/headerList";
 import DecoratorImg from "../../Assets/Img/Decorator.png";
 import NextButton from "../../Components/Button/NexButton/nextButton";
 import DecoratorItems from "../../Components/Card/Decorator/decoratorItem";
-import {setTodo} from "../../Reducer/todoSlice";
+import {setTodo} from "../../Reducer/eventSlice";
 
 /**
  * A functional component for rendering the decorators
@@ -14,21 +14,23 @@ import {setTodo} from "../../Reducer/todoSlice";
 const Decorator = () => {
     const dispatch = useAppDispatch()
     const state = useAppSelector(state => state.decorator)
+    const stateEvent = useAppSelector(state => state.event)
 
     /** Handle click event of next button **/
     const clickHandler = () => {
-        if (state.value !== 0){
+        if (state.value !== 0) {
             dispatch(setTodo({
-                name:"Hire a decorator"
+                id: stateEvent.id - 1,
+                name: "Hire a decorator"
             }))
             dispatch(pagePreservative(9))
 
-        }else {
+        } else {
             dispatch(pagePreservative(9))
 
         }
     }
-    return(
+    return (
         <div className="invite">
             <HeaderList now={80}/>
             <div className="invite-img">
@@ -37,7 +39,7 @@ const Decorator = () => {
             </div>
             <span>Do you wish to hire a decorator?</span>
             <DecoratorItems/>
-            <NextButton handlerClick={()=>clickHandler()} statusDisabled={state.id ? false : true}/>
+            <NextButton handlerClick={() => clickHandler()} statusDisabled={state.id ? false : true}/>
         </div>
     )
 

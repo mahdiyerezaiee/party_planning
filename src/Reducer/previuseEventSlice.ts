@@ -1,20 +1,18 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
-
+interface Todo {
+    id?: number,
+    active?: boolean,
+    name: string,
+}
 interface PreviuseEvent {
     id?: number;
-    eventName: string;
-    eventTime: string;
-    eventDate: string;
-    eventBudget: string;
-    guestSizeType: number;
-    occasionEventType: number;
-    alcoholType: number;
-    foodEventType: number;
-    boardGameEventType: number;
-    decoratorEventType: number;
-    inviteEventType: number;
+    eventName?: string;
+    eventTime?: string;
+    eventDate?: string;
+    eventBudget?: string;
+    occasionEventType?: number;
 
-    todo: []
+    todo?:Todo[] | undefined
 }
 
 interface PreviuseEventState {
@@ -48,13 +46,9 @@ export const previuseEventSlice = createSlice({
                     eventTime: newItem.eventTime,
                     eventDate: newItem.eventDate,
                     eventBudget: newItem.eventBudget,
-                    foodEventType: newItem.foodEventType,
-                    guestSizeType: newItem.guestSizeType,
+
                     occasionEventType: newItem.occasionEventType,
-                    alcoholType: newItem.alcoholType,
-                    boardGameEventType: newItem.boardGameEventType,
-                    decoratorEventType: newItem.decoratorEventType,
-                    inviteEventType: newItem.inviteEventType,
+
                     todo: newItem.todo
                 });
             }

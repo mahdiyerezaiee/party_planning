@@ -3,9 +3,10 @@ import HeaderList from "../../Components/Header/HeaderList/headerList";
 import BoardGameImg from "../../Assets/Img/BoardGame.png";
 import NextButton from "../../Components/Button/NexButton/nextButton";
 import BoardGameItem from "../../Components/Card/BoardGame/boardGameItem";
-import {AddEventToDo} from "../../Utils/addEventToDo";
-import {setTodo} from "../../Reducer/todoSlice";
+import {setTodo} from "../../Reducer/eventSlice";
 import {useEffect, useState} from "react";
+import {pagePreservative} from "../../Reducer/pageSlice";
+import {AddEventToDo} from "../../Utils/addEventToDo";
 
 /**
  * Initializing BoardGame to-do page event
@@ -15,12 +16,7 @@ import {useEffect, useState} from "react";
 const BoardGame = () => {
 
     const state = useAppSelector(state => state)
-    const [states, setState] = useState<any>([])
-
-    /** use the useEffect hook to update local state when global state changes **/
-    useEffect(() => {
-        setState(state)
-    }, [state.todo.itemsList.length])
+    const stateEvent = useAppSelector(state => state.event)
 
     const dispatch = useAppDispatch()
     const gameState = state.boardGame
@@ -29,10 +25,11 @@ const BoardGame = () => {
     const clickHandler = () => {
         if (gameState && gameState.value !== 0) {
             dispatch(setTodo({
+                id: stateEvent.id - 1,
                 name: "Rent Board Games"
             }))
         }
-        AddEventToDo(dispatch, states)
+        AddEventToDo(dispatch)
 
     }
     return (

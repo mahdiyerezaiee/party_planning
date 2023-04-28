@@ -5,7 +5,7 @@ import foodImg from "../../Assets/Img/Food.png";
 
 import NextButton from "../../Components/Button/NexButton/nextButton";
 import FoodItem from "../../Components/Card/Food/foodItem";
-import {setTodo} from "../../Reducer/todoSlice";
+import {setTodo} from "../../Reducer/eventSlice";
 
 /**
  * Initializing Food to-do page event
@@ -15,21 +15,23 @@ import {setTodo} from "../../Reducer/todoSlice";
 const Food = () => {
     const dispatch = useAppDispatch()
     const state = useAppSelector(state => state.food)
+    const stateEvent = useAppSelector(state => state.event)
 
     /** Click handler function for the next button **/
     const clickHandler = () => {
-        if (state.value !== 0){
+        if (state.value !== 0) {
             dispatch(setTodo({
-                name:"Order food"
+                id: stateEvent.id - 1,
+                name: "Order food"
             }))
             dispatch(pagePreservative(7))
 
-        }else {
+        } else {
             dispatch(pagePreservative(7))
 
         }
     }
-    return(
+    return (
         <div className="invite">
             <HeaderList now={50}/>
             <div className="invite-img">
@@ -38,7 +40,7 @@ const Food = () => {
             </div>
             <span>What will be the food arrangements?</span>
             <FoodItem/>
-            <NextButton handlerClick={()=>clickHandler()} statusDisabled={state.id ? false : true}/>
+            <NextButton handlerClick={() => clickHandler()} statusDisabled={state.id ? false : true}/>
         </div>
     )
 

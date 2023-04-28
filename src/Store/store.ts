@@ -10,7 +10,6 @@ import {decoratorSlice} from "../Reducer/decoratorSlice";
 import {boardGameSlice} from "../Reducer/boardGameSlice";
 import {eventSlice} from "../Reducer/eventSlice";
 import {previuseEventSlice} from "../Reducer/previuseEventSlice";
-import {todoSlice} from "../Reducer/todoSlice";
 import {eventIdSlice} from "../Reducer/eventIdSlice";
 
 export const store = configureStore({
@@ -25,7 +24,6 @@ export const store = configureStore({
         alcohol: alcoholSlice.reducer,
         decorator: decoratorSlice.reducer,
         boardGame: boardGameSlice.reducer,
-        todo: todoSlice.reducer,
         event: eventSlice.reducer,
         previuseEvent: previuseEventSlice.reducer,
         eventId: eventIdSlice.reducer
