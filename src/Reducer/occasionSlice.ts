@@ -1,17 +1,17 @@
 import {createSlice} from '@reduxjs/toolkit'
 import type {PayloadAction} from '@reduxjs/toolkit'
 
-interface OccasinState {
+interface OccasionState {
     id: number
 }
 
-let initialState: OccasinState = {
+let initialState: OccasionState = {
     id: 0
 };
 
 /** Load state from local storage **/
 
-const storedState = localStorage.getItem('OccasinState')
+const storedState = localStorage.getItem('OccasionState')
 if (storedState) {
     initialState = JSON.parse(storedState)
 }
@@ -26,7 +26,7 @@ export const occasionSlice = createSlice({
         occasionSelect: (state, action: PayloadAction<number>) => {
             state.id = action.payload
             /** Save state to local storage **/
-            localStorage.setItem('OccasinState', JSON.stringify(state))
+            localStorage.setItem('OccasionState', JSON.stringify(state))
         },
     },
 })

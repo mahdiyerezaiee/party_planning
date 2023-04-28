@@ -24,7 +24,7 @@ const CardCreateNewEvent = () => {
         dispatch(pagePreservative(10))
     }
 
-    if (state.itemsList.length !== 0 && state.itemsList.map((i: any) => i.nameEvent)) {
+    if (state.itemsList.length !== 0  ) {
         return (
             <Fragment>
                 <div className="row pb-3">
@@ -32,7 +32,7 @@ const CardCreateNewEvent = () => {
                     <div className="NewButton col-6"><ButtonCreateNew handlerClick={() => clickHandler()}/></div>
                 </div>
 
-                {state.itemsList.map((item: any) =>
+                {state.itemsList.filter((i: any) => i.eventName  ).map((item: any) =>
                     <div key={item.id} onClick={() => clickHandlerToDo(item.id)} className=" row CardCreateNewEvent">
                         <div className="col-8">
                             <span>{item.eventName}`s {NameOccasin(item.occasionEventType)}</span>
