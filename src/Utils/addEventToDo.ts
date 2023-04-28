@@ -5,7 +5,7 @@ import {setTodo} from "../Reducer/todoSlice";
 export const AddEventToDo = (dispatch: any, state: any) => {
     const formState = state.form
     const guestState = state.guest
-    const boardGameState = state.boradGame
+    const boardGameState = state.boardGame
     const occasionState = state.occasion
     const alcoholState = state.alcohol
     const foodState = state.food
@@ -35,7 +35,7 @@ export const AddEventToDo = (dispatch: any, state: any) => {
     window.location.reload()
 
     localStorage.removeItem("AlcoholState")
-    localStorage.removeItem("BoradGameState")
+    localStorage.removeItem("BoardGameState")
     localStorage.removeItem("DecoratorState")
     localStorage.removeItem("FoodState")
     localStorage.removeItem("FormState")

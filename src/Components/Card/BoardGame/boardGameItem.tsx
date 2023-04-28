@@ -1,15 +1,14 @@
 import {Fragment} from "react";
 import SelectButton from "../../Button/SelecteButton/selectButton";
 import {useAppDispatch, useAppSelector} from "../../../Hook/hook";
-import {alcoholSelect} from "../../../Reducer/alcoholSlice";
 import {BoardGameTypeEnum} from "../../../Enums/boardGameTypeEnum";
-import {boradGameSelect} from "../../../Reducer/boardGameSlice";
+import {boardGameSelect} from "../../../Reducer/boardGameSlice";
 
 const BoardGameItem = () => {
     const dispatch = useAppDispatch()
-    const state=useAppSelector(state => state.boradGame)
+    const state=useAppSelector(state => state.boardGame)
     const selectHandler =(id:number , value : number)=>{
-        dispatch(boradGameSelect({id , value}))
+        dispatch(boardGameSelect({id , value}))
     }
     return(
         <Fragment>

@@ -1,38 +1,38 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
+import type {PayloadAction} from '@reduxjs/toolkit'
 
-interface BoradGameState {
+interface BoardGameState {
     id: number,
-    value:null | number,
+    value: null | number,
 }
 
-let initialState: BoradGameState = {
+let initialState: BoardGameState = {
     id: 0,
-    value:null,
+    value: null,
 };
 
 /** Load state from local storage **/
 
-const storedState = localStorage.getItem('BoradGameState')
+const storedState = localStorage.getItem('BoardGameState')
 if (storedState) {
     initialState = JSON.parse(storedState)
 }
-export const boradGameSlice = createSlice({
-    name: 'boradGame',
+
+/**
+ * Define boardGameSlice
+ */
+export const boardGameSlice = createSlice({
+    name: 'boardGame',
     initialState,
     reducers: {
-        boradGameSelect: (state, action: PayloadAction<BoradGameState>) => {
+        boardGameSelect: (state, action: PayloadAction<BoardGameState>) => {
             state.id = action.payload.id
             state.value = action.payload.value
 
-            // Save state to local storage
-            localStorage.setItem('BoradGameState', JSON.stringify(state))
+            /** Save state to local storage **/
+            localStorage.setItem('BoardGameState', JSON.stringify(state))
         },
     },
 })
 
-export const { boradGameSelect } = boradGameSlice.actions
-
-
-
-
+export const {boardGameSelect} = boardGameSlice.actions

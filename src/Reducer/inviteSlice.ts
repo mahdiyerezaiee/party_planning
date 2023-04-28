@@ -1,14 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
+import type {PayloadAction} from '@reduxjs/toolkit'
 
 interface InviteState {
     id: number,
-    value : null | number
+    value: null | number
 }
 
 let initialState: InviteState = {
     id: 0,
-    value : null
+    value: null
 };
 
 /** Load state from local storage **/
@@ -17,6 +17,10 @@ const storedState = localStorage.getItem('InviteState')
 if (storedState) {
     initialState = JSON.parse(storedState)
 }
+
+/**
+ * Define a slice for managing the invite state
+ */
 export const inviteSlice = createSlice({
     name: 'invite',
     initialState,
@@ -24,14 +28,11 @@ export const inviteSlice = createSlice({
         inviteSelect: (state, action: PayloadAction<InviteState>) => {
             state.id = action.payload.id
             state.value = action.payload.value
-            // Save state to local storage
+
+            /** Save state to local storage **/
             localStorage.setItem('InviteState', JSON.stringify(state))
         },
     },
 })
 
-export const { inviteSelect } = inviteSlice.actions
-
-
-
-
+export const {inviteSelect} = inviteSlice.actions

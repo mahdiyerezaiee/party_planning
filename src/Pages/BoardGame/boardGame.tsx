@@ -23,7 +23,7 @@ const BoardGame = () => {
     }, [state])
 
     const dispatch = useAppDispatch()
-    const gameState = state.boradGame
+    const gameState = state.boardGame
 
     /** Define a click handler function that will dispatch actions and call a utility function **/
     const clickHandler = () => {
@@ -35,7 +35,6 @@ const BoardGame = () => {
         AddEventToDo(dispatch, states)
 
     }
-
     return (
         <div className="invite">
             <HeaderList now={100}/>
