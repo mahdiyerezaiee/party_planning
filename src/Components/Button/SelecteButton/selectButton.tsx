@@ -7,7 +7,14 @@ interface Props {
     selected : boolean | any,
 }
 
-
+/**
+ * handle events on button select click
+ *
+ * @param handlerClick
+ * @param child
+ * @param selected
+ * @constructor
+ */
 const SelectButton:React.FC<Props> = ( { handlerClick ,child, selected } ) => {
     return(
         <button className={selected ?"selectBox selected" : " selectBox "}  onClick={handlerClick}>{child}</button>

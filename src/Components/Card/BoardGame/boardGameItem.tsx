@@ -8,13 +8,13 @@ import {boradGameSelect} from "../../../Reducer/boardGameSlice";
 const BoardGameItem = () => {
     const dispatch = useAppDispatch()
     const state=useAppSelector(state => state.boradGame)
-    const selectHandler =(id:number)=>{
-        dispatch(boradGameSelect(id))
+    const selectHandler =(id:number , value : number)=>{
+        dispatch(boradGameSelect({id , value}))
     }
     return(
         <Fragment>
             {BoardGameTypeEnum.map((item:any)=>
-                <SelectButton key={item.id} handlerClick={()=>selectHandler(item.id)} child={item.name} selected={state.id === item.id ? true : false}/>
+                <SelectButton key={item.id} handlerClick={()=>selectHandler(item.id , item.value)} child={item.name} selected={state.id === item.id ? true : false}/>
             )}
         </Fragment>
     )

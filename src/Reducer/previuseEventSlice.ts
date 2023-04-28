@@ -13,6 +13,8 @@ interface PreviuseEvent {
     boardGameEventType: number;
     decoratorEventType: number;
     inviteEventType: number;
+
+    todo:[]
 }
 
 interface PreviuseEventState {
@@ -50,6 +52,7 @@ export const previuseEventSlice = createSlice({
                     boardGameEventType: newItem.boardGameEventType,
                     decoratorEventType: newItem.decoratorEventType,
                     inviteEventType: newItem.inviteEventType,
+                    todo:newItem.todo
                 });
             }
 

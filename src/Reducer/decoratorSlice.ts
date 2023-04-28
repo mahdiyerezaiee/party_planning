@@ -2,11 +2,13 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 interface DecoratorState {
-    id: number
+    id: number,
+    value:null | number,
 }
 
 let initialState: DecoratorState = {
-    id: 0
+    id: 0,
+    value:null ,
 };
 
 /** Load state from local storage **/
@@ -19,8 +21,9 @@ export const decoratorSlice = createSlice({
     name: 'decorator',
     initialState,
     reducers: {
-        decoratorSelect: (state, action: PayloadAction<number>) => {
-            state.id = action.payload
+        decoratorSelect: (state, action: PayloadAction<DecoratorState>) => {
+            state.id = action.payload.id
+            state.value = action.payload.value
             // Save state to local storage
             localStorage.setItem('DecoratorState', JSON.stringify(state))
         },

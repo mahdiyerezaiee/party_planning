@@ -7,6 +7,7 @@ import Food from "../Pages/Food/food";
 import Alcohol from "../Pages/Alcohol/alcohol";
 import Decorator from "../Pages/Decorator/decorator";
 import BoardGame from "../Pages/BoardGame/boardGame";
+import ChackList from "../Pages/CheckList/checkList";
 interface Props {
     page : number | any
 }
@@ -30,6 +31,9 @@ export const conditionalComponent = ({page}:Props)=> {
             return <Decorator/>;
         case 9:
             return <BoardGame/>;
+
+        case 10:
+            return  <ChackList/>
         default:
             return <Home/>;
     }

@@ -3,14 +3,16 @@ import HeaderHome from "../../Components/Header/HeaderHome/headerHome";
 import CardCreateNewEvent from "../../Components/Card/CardCreateNewEvent/cardCreateNewEvent";
 import PreviuseHouseParties from "../../Components/Card/PreviousHouseParties/previuseHouseParties";
 import IntervalEvent from "../../Utils/intervalEvent";
+
+/**
+ *
+ * @constructor
+ */
 const Home = () => {
     return(
-
-
-    <Fragment >
+        <Fragment >
         <IntervalEvent/>
-
-        <HeaderHome/>
+         <HeaderHome/>
          <CardCreateNewEvent/>
          <PreviuseHouseParties/>
       </Fragment>

@@ -5,11 +5,29 @@ import NextButton from "../../Components/Button/NexButton/nextButton";
 import InviteItems from "../../Components/Card/E-invite/invite";
 import inviteImg from "../../Assets/Img/Invite.png";
 import "./syle.scss"
+import {setTodo} from "../../Reducer/todoSlice";
+
+/**
+ * Initializing Invitation to-do page event
+ *
+ * @constructor
+ */
 const Invite = () => {
     const dispatch = useAppDispatch()
     const state = useAppSelector(state => state.invite)
+
+    /** Click handler function for the next button **/
     const clickHandler = () => {
-        dispatch(pagePreservative(6))
+        if (state.value !== 0){
+            dispatch(setTodo({
+                name:"Invite guests"
+            }))
+            dispatch(pagePreservative(6))
+
+        }else {
+            dispatch(pagePreservative(6))
+
+        }
     }
     return(
         <div className="invite">

@@ -2,11 +2,14 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 interface AlcoholState {
-    id: number
+    id: number,
+    value:any | number,
+
 }
 
 let initialState: AlcoholState = {
-    id: 0
+    id: 0,
+    value:null,
 };
 
 /** Load state from local storage **/
@@ -19,8 +22,10 @@ export const alcoholSlice = createSlice({
     name: 'alcohol',
     initialState,
     reducers: {
-        alcoholSelect: (state, action: PayloadAction<number>) => {
-            state.id = action.payload
+        alcoholSelect: (state, action: PayloadAction<AlcoholState>) => {
+            state.id = action.payload.id
+            state.value = action.payload.value
+
             // Save state to local storage
             localStorage.setItem('AlcoholState', JSON.stringify(state))
         },

@@ -7,13 +7,13 @@ import {foodSelect} from "../../../Reducer/foodSlice";
 const FoodItems = () => {
     const dispatch = useAppDispatch()
     const state=useAppSelector(state => state.food)
-    const selectHandler =(id:number)=>{
-        dispatch(foodSelect(id))
+    const selectHandler =(id:number , value:number)=>{
+        dispatch(foodSelect({ id, value }))
     }
     return(
         <Fragment>
             {FoodTypeEnum.map((item:any)=>
-                    <SelectButton key={item.id} handlerClick={()=>selectHandler(item.id)} child={item.name} selected={state.id === item.id ? true : false}/>
+                    <SelectButton key={item.id} handlerClick={()=>selectHandler(item.id , item.value)} child={item.name} selected={state.id === item.id ? true : false}/>
 )}
     </Fragment>
 )

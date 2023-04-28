@@ -13,7 +13,12 @@ interface Event {
     boardGameEventType: number;
     decoratorEventType: number;
     inviteEventType: number;
-    createDate?:string
+    todo:any
+}
+interface todoEdit {
+    id: number;
+    idTodo:number,
+    active:boolean,
 }
 
 interface EventState {
@@ -53,7 +58,7 @@ export const eventSlice = createSlice({
                 boardGameEventType: newItem.boardGameEventType,
                 decoratorEventType: newItem.decoratorEventType,
                 inviteEventType: newItem.inviteEventType,
-                createDate:new Date().toLocaleDateString("en-US")
+                todo:newItem.todo
             });
 
             // Save state to local storage
@@ -64,9 +69,20 @@ export const eventSlice = createSlice({
             state.itemsList = removeItem
 
             // Save state to local storage
+        },
+        changeActiveTodo: (state, action: PayloadAction<todoEdit>) => {
+            const editItem = action.payload;
+            const existingItem:any = state.itemsList.find((item:any) => item.id === editItem.id);
+            const todo = existingItem.todo
+            const todoList = todo.find((i:any)=> i.id === editItem.idTodo)
+            if (todoList) {
+                todoList.active = editItem.active
+
+            }
+            // Save state to local storage
             localStorage.setItem('EventState', JSON.stringify(state));
         },
     },
 });
 
-export const { setEvent, removePreviuseItem } = eventSlice.actions;
+export const { setEvent, removePreviuseItem, changeActiveTodo } = eventSlice.actions;

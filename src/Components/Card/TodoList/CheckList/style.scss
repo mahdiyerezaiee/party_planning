@@ -1,0 +1,29 @@
+.checkListItem{
+  margin-top: 16px;
+  input{
+    border: none!important;
+
+  }
+  .input-group {
+    border: none!important;
+height: 64px!important;
+  }
+  .form-check-input{
+    border:1px solid #FFFFFF!important;
+    &:checked {
+      background-color: #ffffff!important;
+      border-color: #ffffff!important;
+    }
+
+    &:focus {
+      border-color: #f8faff!important;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem rgba(157, 157, 157, 0.25)!important;
+    }
+    &[type=checkbox] {
+      background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%231C1C1C%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27m6 10 3 3 6-6%27/%3e%3c/svg%3e")!important;
+    }
+  }
+
+
+}

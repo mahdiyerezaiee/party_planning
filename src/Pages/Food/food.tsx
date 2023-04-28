@@ -5,12 +5,29 @@ import foodImg from "../../Assets/Img/Food.png";
 
 import NextButton from "../../Components/Button/NexButton/nextButton";
 import FoodItem from "../../Components/Card/Food/foodItem";
+import {setTodo} from "../../Reducer/todoSlice";
 
+/**
+ * Initializing Food to-do page event
+ *
+ * @constructor
+ */
 const Food = () => {
     const dispatch = useAppDispatch()
     const state = useAppSelector(state => state.food)
+
+    /** Click handler function for the next button **/
     const clickHandler = () => {
-        dispatch(pagePreservative(7))
+        if (state.value !== 0){
+            dispatch(setTodo({
+                name:"Order food"
+            }))
+            dispatch(pagePreservative(7))
+
+        }else {
+            dispatch(pagePreservative(7))
+
+        }
     }
     return(
         <div className="invite">

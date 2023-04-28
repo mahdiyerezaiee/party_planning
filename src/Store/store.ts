@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit'
+import {configureStore} from '@reduxjs/toolkit'
 import {pageSlice} from "../Reducer/pageSlice";
 import {occasionSlice} from "../Reducer/occasionSlice";
 import {guestSlice} from "../Reducer/guestSlice";
@@ -10,21 +10,25 @@ import {decoratorSlice} from "../Reducer/decoratorSlice";
 import {boradGameSlice} from "../Reducer/boardGameSlice";
 import {eventSlice} from "../Reducer/eventSlice";
 import {previuseEventSlice} from "../Reducer/previuseEventSlice";
+import {todoSlice} from "../Reducer/todoSlice";
+import {eventIdSlice} from "../Reducer/eventIdSlice";
 
 export const store = configureStore({
     reducer: {
 
-    page: pageSlice.reducer,
-    occasion:occasionSlice.reducer,
-    guest: guestSlice.reducer,
-    form:formSlice.reducer,
-    invite:inviteSlice.reducer,
-    food:foodSlice.reducer,
-    alcohol:alcoholSlice.reducer,
-    decorator:decoratorSlice.reducer,
-    boradGame:boradGameSlice.reducer,
-    event:eventSlice.reducer,
-    previuseEvent:previuseEventSlice.reducer,
+        page: pageSlice.reducer,
+        occasion: occasionSlice.reducer,
+        guest: guestSlice.reducer,
+        form: formSlice.reducer,
+        invite: inviteSlice.reducer,
+        food: foodSlice.reducer,
+        alcohol: alcoholSlice.reducer,
+        decorator: decoratorSlice.reducer,
+        boradGame: boradGameSlice.reducer,
+        todo: todoSlice.reducer,
+        event: eventSlice.reducer,
+        previuseEvent: previuseEventSlice.reducer,
+        eventId: eventIdSlice.reducer
 
     },
 })

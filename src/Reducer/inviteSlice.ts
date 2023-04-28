@@ -2,11 +2,13 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 interface InviteState {
-    id: number
+    id: number,
+    value : null | number
 }
 
 let initialState: InviteState = {
-    id: 0
+    id: 0,
+    value : null
 };
 
 /** Load state from local storage **/
@@ -19,8 +21,9 @@ export const inviteSlice = createSlice({
     name: 'invite',
     initialState,
     reducers: {
-        inviteSelect: (state, action: PayloadAction<number>) => {
-            state.id = action.payload
+        inviteSelect: (state, action: PayloadAction<InviteState>) => {
+            state.id = action.payload.id
+            state.value = action.payload.value
             // Save state to local storage
             localStorage.setItem('InviteState', JSON.stringify(state))
         },

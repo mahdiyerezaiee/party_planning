@@ -1,3 +1,6 @@
+/**
+ * in case we don't have previuse data
+ */
 export const PreviuseItemConfig: any = [
         {
             "OccasionType": 1,

@@ -25,7 +25,7 @@ export  default  function IntervalEvent() {
                 }
 
 
-        }, 10000); // Check every minute
+        }, 1000); // Check every minute
 
         // Clean up the interval when the component unmounts
         return () => clearInterval(intervalId);
