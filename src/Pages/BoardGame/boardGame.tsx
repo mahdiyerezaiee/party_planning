@@ -20,7 +20,7 @@ const BoardGame = () => {
     /** use the useEffect hook to update local state when global state changes **/
     useEffect(() => {
         setState(state)
-    }, [state])
+    }, [state.todo.itemsList.length])
 
     const dispatch = useAppDispatch()
     const gameState = state.boardGame
