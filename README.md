@@ -1,4 +1,4 @@
-# SnappExperss Test
+# Planning Party
 
 The repository contains the code for the Snapp-Experss Test, providing a web page for Planning Party.
 
@@ -8,7 +8,7 @@ To get started with the Snapp-Experss Project, follow these steps:
 
 1. Clone this repository to your local machine.
 ```
-git clone https://github.com/mahdiyerezaiee/party_planning_snapp_test.git
+git clone https://github.com/mahdiyerezaiee/party_planning.git
 ```
 2. Install the required packages.
 ```
